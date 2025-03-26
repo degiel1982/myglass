@@ -13,6 +13,20 @@ xpanes.register_pane("myglass:glass_pane_black", {
 	},
 })
 
+core.clear_craft({
+    output = "myglass:glass_pane_black",
+})
+
+-- Register a new recipe for myglass:glass_pane_black
+core.register_craft({
+    output = "myglass:glass_pane_black 6",
+    recipe = {
+        {"default:glass", "dye:black", "default:glass"},
+        {"default:glass", "", "default:glass"},
+        {"", "", ""},
+    },
+})
+
 --xpane White
 xpanes.register_pane("myglass:glass_pane_white", {
 	description = ("White Glass Pane"),
